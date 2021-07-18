@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta charset="ISO-8859-1">
+<meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<link rel="stylesheet" href="./style/partner.css">
+<script type="text/javascript" src="https://cdn.elliemae.io/elliemae/core/ssf/1.0/elli.ssf.guest-with-polyfill.js"></script>
+<script src="./script/pageFunctions.js"></script>
+<script src="./script/adapterCalls.js"></script>
+<script>
+
+	// initialize global variables
+    
+    const ADAPTER_DOMAIN_NAME = "6d0e60d81169.ngrok.io";
+
+    // initialize the Partner JavaScript API
+
+    elli.script.connect();
+	
+	// setup a document listener to load the page when the HTML page is loaded.
+
+	document.onreadystatechange = function ()
+	{
+	    if (document.readyState == "complete")
+	    {
+			console.log("DOM loaded.  Starting to load admin page.");
+
+            loadAdminPage();
+	    }
+	}
+	
+</script>
+<head>
+<title>Admin UI</title>
+</head>
+<body>
+<header>Sample Partner - Admin Page</header>
+<section class="content">
+<div id="mainPanel">
+	<h1 id="contentTitle">Here We Go!</h1>
+    <form id="orderDetailPanel">
+        <div class="field">
+            <label for="templateName">Name:</label>
+            <input type="text" id="templateName" name="templateName" />
+        </div>
+        <div class="field">
+            <label for="products">Products:</label>
+            <select id="products" name="products">
+                <option value="select">Select One...</option>
+                <option value="1111">Product One</option>
+                <option value="2222">Product Two</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label for="rush">Rush:</label>
+            <input type="checkbox" id="rush" name="rush" value="Rush" />
+        </div>
+    </form>
+	<article class="action">
+		<input id="saveTemplateButton" type="button" name="saveTemplate" value="Loading..." disabled />
+		<input id="closeAdminButton" type="button" onclick="closeAdminPage()" name="closeAdmin" value="Close" />
+	</article>
+</div>
+</section>
+<aside class="important">
+	<p>If the partner has lender specific UI information (like a list of products), the partner will need to include a feature that can identify which lender the user works for (like a login function).</p>
+</aside>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<meta charset="ISO-8859-1">
+<meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<link rel="stylesheet" href="./style/partner.css">
+<script type="text/javascript" src="https://cdn.elliemae.io/elliemae/core/ssf/1.0/elli.ssf.guest-with-polyfill.js"></script>
+<script src="./script/pageFunctions.js"></script>
+<script src="./script/adapterCalls.js"></script>
+<script>
+
+	// initialize global variables
+
+	const ADAPTER_DOMAIN_NAME = "f541eea56724.ngrok.io";
+
+	let priorTrxId;
+
+	let attachmentFileList = new Array();
+
+	let pageState = "order";
+
+	// initialize the Partner JavaScript API
+	
+	elli.script.connect();
+	
+	// setup a document listener to load the page when the HTML page is loaded.
+
+	document.onreadystatechange = function ()
+	{
+	    if (document.readyState === "complete")
+	    {
+			console.log("DOM loaded.  Starting to load page.");
+
+			loadPage();
+	    }
+	}
+	
+</script>
+<head>
+<title>Partner UI</title>
+</head>
+<body>
+<header>Sample Partner</header>
+<section class="content">
+<div id="orderPanel">
+	<h1 id="requestTitle">Loading...</h1>
+    <form id="orderDetailPanel">
+        <div class="field">
+            <label for="orderNumber">Order Number:</label>
+            <input type="text" id="orderNumber" name="orderNumber" value="" disabled />
+        </div>
+        <div class="field">
+            <label for="products">Products:</label>
+            <select id="products" name="products">
+                <option value="select" selected>Select One...</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label for="rush">Rush:</label>
+            <input type="checkbox" id="rush" name="rush" value="Rush" />
+        </div>
+    </form>
+	<article class="attachment">
+		<input id="addAttachButton" type="button" onclick="addAttachments();" name="attach" value="Add Attachments" disabled />
+		<input id="clearAttachButton" type="button" onclick="clearAttachments();" name="clearAttach" value="Clear Attachments" />
+		<p id="attachmentList">No Attachments</p>
+	</article>
+	<article class="action">
+		<input id="sendButton" type="button" onclick="sendRequest();" name="send" value="Submit" disabled />
+		<input id="cancelButton" type="button" onclick="cancel();" name="cancel" value="Cancel" />
+	</article>
+</div>
+<div id="progressPanel" style="display:none;">
+	<h1 id="progressTitle">Loading...</h1>
+	<input id="closeButton" type="button" onclick="closePage();" name="close" value="Close" />
+</div>
+<div id="debugPanel" style = "display:none;">
+	<table>
+		<tr>
+			<td>URL:</td><td id="pageUrlValue"></td>
+		</tr>
+		<tr>
+			<td>Referrer:</td><td id="referrerUrlValue"></td>
+		</tr>
+		<tr>
+			<td>User Agent:</td><td id="userAgentValue"></td>
+		</tr>
+		<tr>
+			<td><code>GET UI</code> duration:</td><td id="getUiDurationValue"></td>
+		</tr>
+	</table>
+</div>
+</section>
+<nav id="toggle" style="text-align: right;"><ul><li onclick="showOrder();">Order</li><li onclick="showDebug();">Debug</li></ul></nav>
+</body>
+</html>

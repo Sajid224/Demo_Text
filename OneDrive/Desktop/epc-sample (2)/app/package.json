@@ -1,0 +1,25 @@
+{
+  "name": "epc2-sample",
+  "version": "1.0.0",
+  "description": "A simple EPC 2 sample application that can be used to understand solution flow and expand to gain a deeper understanding",
+  "main": "index.js",
+  "scripts": {
+    "dev-partner": "nodemon ./partner.js",
+    "docs-adapter": "jsdoc ./partnerAdapter -r -d ./partnerAdapter/docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsdoc": "^3.6.5",
+    "mime-types": "^2.1.27",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.5.9",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

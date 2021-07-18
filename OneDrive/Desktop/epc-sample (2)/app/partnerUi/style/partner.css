@@ -1,0 +1,191 @@
+@charset "ISO-8859-1";
+
+#styleVer::after {
+  content: " // Style - 2019.10-16";
+}
+
+/* header styles ============================================================================
+================================================================================================*/
+
+body>header
+{
+	text-align: center;
+	padding: 0px 0px 20px 0px;
+	border: 1px solid #777788;
+	background-color: #CCDDEE;
+}
+
+/*  content styles ==================================================================================
+================================================================================================*/
+h1
+{
+	text-align: center;
+	color: rgb(0, 128, 0);
+}
+
+div#main
+{
+	width: 85%;
+	margin-top: 1.1em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section.content>div
+{
+	width: 85%;
+	height: 40%;
+	text-align: center;
+}
+
+section.content>div::after
+{
+  clear: both;
+  display: block;
+  content: "";
+}
+
+article.order
+{
+	float: left;
+	padding: 5px 10px 5px 10px;
+	width: 45%;
+}
+
+article.summary
+{
+	float: left;
+	padding: 5px 10px 5px 10px;
+	width: 45%;
+}
+
+article.attachment
+{
+	clear: both;
+	width: 90%;
+	padding: .1em;
+	background-color: #DDDDDD;
+	margin-top: .1em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.1em;
+	text-align: center;
+	border: 1px solid #AAAAAA;
+	border-radius: 3px;
+}
+
+article.attachment input
+{
+	margin: 3px;
+}
+
+article.action input
+{
+	margin: 3px;
+}
+
+div.scroll
+{
+	float: left;
+	overflow-y: auto;
+}
+
+div#main table.label-content
+{
+  width: 90%;
+}
+
+table.label-content
+{
+	margin: 5px 10px;
+	border-collapse: collapse;
+	width: 30%;
+}
+
+table.label-content, th, td
+{
+	padding: 3px 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+table.label-content tr th
+{
+	text-align: right;
+}
+
+
+aside.important
+{
+	border: 1px solid #AA0000;
+	padding: 5px 5px 5px 45px;
+	color: #990000;
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+aside.important:before
+{
+	content: '';
+    background:url('http://localhost:8080/img/important_32.png');
+  	background-repeat: no-repeat;
+    position:absolute;
+    width: 32px;
+    height: 32px;
+    margin-left:-40px;
+    margin-top: 10px
+}
+
+/*  nav styles ==================================================================================
+================================================================================================*/
+
+
+nav#toggle
+{
+	clear: both;
+	padding: 3px;
+}
+
+nav#toggle ul li
+{
+	padding: 3px 8px 3px 8px;
+	margin-right: 15px;
+	list-style: none;
+	display: inline;
+	border: 1px solid #777788;
+	border-radius: 3px;
+	font-size: .75em;
+}
+
+nav#toggle ul li:hover
+{
+	background-color: #CCDDEE;
+}
+
+
+/*  footer styles ==================================================================================
+================================================================================================*/
+
+footer
+{
+	clear: both;
+	padding: 5px 10px;
+	border: 1px solid #777788;
+	background-color: #CCDDEE;
+	font-size: .75em;
+}
+
+footer p
+{
+	margin-bottom: .5em;
+}
+
+footer p.vers
+{
+	margin-bottom: .2em;
+	text-align: right;
+}
+
+footer li
+{
+	margin-bottom: .3em;
+}

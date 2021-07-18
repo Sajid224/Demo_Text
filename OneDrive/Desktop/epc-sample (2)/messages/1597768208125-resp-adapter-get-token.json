@@ -1,0 +1,44 @@
+{
+	"statusCode": 200,
+	"body": "{\"access_token\":\"<<A_TOKEN>>\",\"token_type\":\"Bearer\",\"expires_in\":7199}",
+	"headers": {
+		"date": "Tue, 18 Aug 2020 16:30:04 GMT",
+		"content-type": "application/json; charset=utf-8",
+		"content-length": "87",
+		"connection": "close",
+		"vary": "X-HTTP-Method-Override, Accept-Encoding",
+		"access-control-expose-headers": "Vary,Date,Content-Length,X-Correlation-ID",
+		"access-control-allow-origin": "*",
+		"public-key-pins-report-only": "pin-sha256=\"ZLtb2AMR+j9TvZlATKuHYq1uBIRH0Kl/IZ/OyhZh83w=\"; pin-sha256=\"JSMzqOOrtyOT1kmau6zKhgT676hGgczD5VMdRMyJZFA=\"; pin-sha256=\"fFO133kTXZr2GV72u3OrmMLImVC4krGS3/14TbklpBw=\"; pin-sha256=\"G9pa//g3gTgL9wgZj599LbHgZ/FLuep7rnCqwLAwXns=\"; pin-sha256=\"F3CN/yt/rsnLG1IV67JCHZewVDyTb6ydbgK5LyDlxwc=\"; pin-sha256=\"PZXN3lRAy+8tBKk2Ox6F7jIlnzr2Yzmwqc3JnyfXoCw=\"max-age=7776000; includeSubDomains; report-uri=\"/report\"",
+		"strict-transport-security": "max-age=31536000; includeSubDomains",
+		"x-xss-protection": "1; mode=block",
+		"x-content-type-options": "nosniff",
+		"content-security-policy-report-only": "script-src 'self' *.elliemae.io; report-uri /report",
+		"x-permitted-cross-domain-policies": "none",
+		"referrer-policy": "no-referrer",
+		"expect-ct": "max-age=86400, report-uri=\"/report\"",
+		"x-correlation-id": "0468ff4a-0ecd-47b4-8144-6b3be72cbe54"
+	},
+	"request": {
+		"uri": {
+			"protocol": "https:",
+			"slashes": true,
+			"auth": null,
+			"host": "api.elliemae.com",
+			"port": 443,
+			"hostname": "api.elliemae.com",
+			"hash": null,
+			"search": null,
+			"query": null,
+			"pathname": "/oauth2/v1/token",
+			"path": "/oauth2/v1/token",
+			"href": "https://api.elliemae.com/oauth2/v1/token"
+		},
+		"method": "POST",
+		"headers": {
+			"User-Agent": "EllieMae Integrations Team EPC Example in Node.js",
+			"content-type": "application/x-www-form-urlencoded",
+			"content-length": 147
+		}
+	}
+}

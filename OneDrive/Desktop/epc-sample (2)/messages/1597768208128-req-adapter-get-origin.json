@@ -1,0 +1,9 @@
+{
+	"method": "GET",
+	"url": "https://api.elliemae.com/partner/v2/origins/acb5e034-96eb-45ca-a55d-ee0a47a72e59",
+	"headers": {
+		"User-Agent": "EllieMae Integrations Team EPC Example in Node.js",
+		"Authorization": "Bearer <<TOKEN>>",
+		"X-Elli-PAT": "<<PAT_PROVIDED_BY_PARTNER_UI>>"
+	}
+}

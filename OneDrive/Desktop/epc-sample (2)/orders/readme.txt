@@ -1,0 +1,1 @@
+This directory will be used to download files and upload responses.
